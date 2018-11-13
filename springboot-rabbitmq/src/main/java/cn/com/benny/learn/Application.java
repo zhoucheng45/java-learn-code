@@ -86,7 +86,7 @@ public class Application {
     }
 
     /**
-     * 将队列topic.message与exchange绑定，binding_key为topic.message,就是完全匹配
+     * 将队列topic.message与topicExchange绑定，binding_key为topic.message,就是完全匹配
      * @param queueMessage
      * @param exchange
      * @return
