@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="JavaWebCodeGenerator:war">
+    <output-path>$USER_HOME$/Downloads/PracticeArea-master/JavaWebCodeGenerator/target</output-path>
+    <root id="archive" name="JavaWebCodeGenerator.war">
+      <element id="artifact" artifact-name="JavaWebCodeGenerator:war exploded" />
+    </root>
+  </artifact>
+</component>
