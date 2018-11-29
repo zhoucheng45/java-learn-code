@@ -22,6 +22,11 @@
         <module>mybatis-generator-learn</module>
         <module>freemarker-learn</module>
         <module>spring-redis</module>
+        <module>springboot-learn</module>
+        <module>guava-learn</module>
+        <module>benny-common-utils</module>
+        <module>spring-mongodb</module>
+        <module>log4j2-learn</module>
     </modules>
 
     <name>learn-code</name>

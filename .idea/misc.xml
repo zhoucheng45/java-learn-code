@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../magicwifi-codgen/pom.xml" />
         <option value="$USER_HOME$/Downloads/PracticeArea-master/JavaWebCodeGenerator/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-rabbitmq/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
