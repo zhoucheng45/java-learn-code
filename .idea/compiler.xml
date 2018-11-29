@@ -28,7 +28,7 @@
       <module name="guava-learn" target="1.8" />
       <module name="java-learn-code" target="1.8" />
       <module name="JavaWebCodeGenerator" target="1.5" />
-      <module name="log4j2-learn" target="1.7" />
+      <module name="log4j2-learn" target="1.8" />
       <module name="magicwifi-codgen" target="1.5" />
       <module name="mybatis-generator-learn" target="1.7" />
       <module name="spring-mongodb" target="1.8" />
