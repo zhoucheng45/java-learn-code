@@ -8,13 +8,16 @@
       <module fileurl="file://$PROJECT_DIR$/freemarker-learn/freemarker-learn.iml" filepath="$PROJECT_DIR$/freemarker-learn/freemarker-learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/guava-learn/guava-learn.iml" filepath="$PROJECT_DIR$/guava-learn/guava-learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-learn-code.iml" filepath="$PROJECT_DIR$/java-learn-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/log4j-learn/log4j-learn.iml" filepath="$PROJECT_DIR$/log4j-learn/log4j-learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/log4j2-learn/log4j2-learn.iml" filepath="$PROJECT_DIR$/log4j2-learn/log4j2-learn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logback-learn/logback-learn.iml" filepath="$PROJECT_DIR$/logback-learn/logback-learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/../magicwifi-codgen/magicwifi-codgen.iml" filepath="$PROJECT_DIR$/../magicwifi-codgen/magicwifi-codgen.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis-generator-learn/mybatis-generator-learn.iml" filepath="$PROJECT_DIR$/mybatis-generator-learn/mybatis-generator-learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-mongodb/spring-mongodb.iml" filepath="$PROJECT_DIR$/spring-mongodb/spring-mongodb.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-redis/spring-redis.iml" filepath="$PROJECT_DIR$/spring-redis/spring-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-learn/springboot-learn.iml" filepath="$PROJECT_DIR$/springboot-learn/springboot-learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-rabbitmq/springboot-rabbitmq.iml" filepath="$PROJECT_DIR$/springboot-rabbitmq/springboot-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springwebflux-learn/springwebflux-learn.iml" filepath="$PROJECT_DIR$/springwebflux-learn/springwebflux-learn.iml" />
     </modules>
   </component>
 </project>

@@ -33,6 +33,9 @@
         <module>benny-common-utils</module>
         <module>spring-mongodb</module>
         <module>log4j2-learn</module>
+        <module>springwebflux-learn</module>
+        <module>log4j-learn</module>
+        <module>logback-learn</module>
     </modules>
 
     <name>learn-code</name>
