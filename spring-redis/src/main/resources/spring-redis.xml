@@ -45,13 +45,6 @@
         <property name="usePool" value="true"/>
 
     </bean>
-    <bean id="standaloneConfig" class="org.springframework.data.redis.connection.RedisStandaloneConfiguration" >
-        <property name="hostName" value="${redis.host}"/>
-        <property name="port" value=""/>
-    </bean>
-    <bean id="jedisClientConfiguration" class="org.springframework.data.redis.connection.jedis.DefaultJedisClientConfiguration" >
-        <property name="usePooling" value="true"/>
-    </bean>
 
     <!-- redis template definition -->
     <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">

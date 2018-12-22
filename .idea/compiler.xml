@@ -8,23 +8,39 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="apollo-learn" />
+        <module name="benny-common-utils" />
         <module name="freemarker-learn" />
+        <module name="guava-learn" />
         <module name="JavaWebCodeGenerator" />
+        <module name="log4j-learn" />
+        <module name="log4j2-learn" />
+        <module name="logback-learn" />
         <module name="magicwifi-codgen" />
         <module name="mybatis-generator-learn" />
+        <module name="spring-mongodb" />
         <module name="spring-redis" />
+        <module name="springboot-learn" />
+        <module name="springboot-rabbitmq" />
+        <module name="springwebflux-learn" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="apollo-learn" target="1.7" />
+      <module name="benny-common-utils" target="1.8" />
       <module name="freemarker-learn" target="1.7" />
+      <module name="guava-learn" target="1.8" />
       <module name="java-learn-code" target="1.8" />
       <module name="JavaWebCodeGenerator" target="1.5" />
+      <module name="log4j-learn" target="1.7" />
+      <module name="log4j2-learn" target="1.8" />
+      <module name="logback-learn" target="1.8" />
       <module name="magicwifi-codgen" target="1.5" />
       <module name="mybatis-generator-learn" target="1.7" />
-      <module name="spring-cloud-eureka-learn" target="1.7" />
-      <module name="spring-cloud-learn" target="1.8" />
+      <module name="spring-mongodb" target="1.8" />
       <module name="spring-redis" target="1.7" />
+      <module name="springboot-learn" target="1.7" />
+      <module name="springboot-rabbitmq" target="1.7" />
+      <module name="springwebflux-learn" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
