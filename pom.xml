@@ -22,6 +22,7 @@
         <module>mybatis-generator-learn</module>
         <module>freemarker-learn</module>
         <module>spring-redis</module>
+        <module>springboot-rabbitmq</module>
     </modules>
 
     <name>learn-code</name>

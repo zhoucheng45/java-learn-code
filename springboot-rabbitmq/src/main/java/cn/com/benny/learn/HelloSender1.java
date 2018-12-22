@@ -23,7 +23,7 @@ public class HelloSender1 {
     public void send() {
         String sendMsg = "hello1 " + new Date();
         System.out.println("Sender1 : " + sendMsg);
-        this.rabbitTemplate.convertAndSend("helloQueue", sendMsg);
+        this.rabbitTemplate.convertAndSend("topicExchange","topic.234", sendMsg);
     }
 
 }
