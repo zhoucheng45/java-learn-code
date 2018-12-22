@@ -5,11 +5,12 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@KafkaListener(topics = {"test"})
+@KafkaListener(topics = {"order"})
 public class KafkaConsumer {
 
     @KafkaHandler
     public void processMessage(String content) {
-        System.out.println("消息被消费"+content);
+        System.out.println("消息被消费" + content);
+
     }
 }
