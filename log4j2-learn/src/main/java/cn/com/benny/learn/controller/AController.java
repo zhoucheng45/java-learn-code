@@ -27,8 +27,10 @@ import java.util.concurrent.CountDownLatch;
 public class AController {
 
     Logger logger = LoggerFactory.getLogger(AController.class);
+    Logger logger_kafka = LoggerFactory.getLogger("kafka-log4j2");
 
     private CountDownLatch cd = new CountDownLatch(50);
+    private CountDownLatch cd1 = new CountDownLatch(50);
 
     @RequestMapping("/a")
     public @ResponseBody String a(@RequestParam("name") String name) throws InterruptedException {
@@ -42,18 +44,32 @@ public class AController {
 
         for (int j=0; j<50; j++){
             new Thread(() -> {
-                for (int i=0; i<500*100;i++) {
+                for (int i=0; i<50*10;i++) {
                     logger.info("收到请求，参数{}", name);
+
                 }
                 cd.countDown();
             }).start();
         }
 
         cd.await();
-
-
         Date last = new Date();
         logger.info("耗时{}}", last.getTime() - date.getTime());
+
+
+
+        Date date1 = new Date();
+        for (int j=0; j<50; j++){
+            new Thread(() -> {
+                for (int i=0; i<50*10;i++) {
+                    logger_kafka.info("收到请求，参数{}", name);
+                }
+                cd1.countDown();
+            }).start();
+        }
+        cd1.await();
+        Date date2 = new Date();
+        logger_kafka.info("耗时{}}", date2.getTime() - date1.getTime());
         return name;
 
     }
