@@ -43,9 +43,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class PaHttpUtil {
+public class HttpUtil {
 
-    private static Logger logger = LoggerFactory.getLogger(PaHttpUtil.class);
+    private static Logger logger = LoggerFactory.getLogger(HttpUtil.class);
 
     //http连接池管理器
     private PoolingHttpClientConnectionManager pool;
@@ -60,31 +60,31 @@ public class PaHttpUtil {
     private int maxTotal = 200;
     private int defaultMaxPerRoute = 20;
 
-    private static PaHttpUtil httpUtil = null;
+    private static HttpUtil httpUtil = null;
 
-    protected PaHttpUtil(String proxyHostName) {
+    protected HttpUtil(String proxyHostName) {
         this.proxyHostName = proxyHostName;
         init();
     }
 
-    protected PaHttpUtil() {
+    protected HttpUtil() {
         init();
     }
-    public static PaHttpUtil getInstance() {
+    public static HttpUtil getInstance() {
         if(httpUtil == null){
-            synchronized (PaHttpUtil.class){
+            synchronized (HttpUtil.class){
                 if(httpUtil == null){
-                    httpUtil = new PaHttpUtil();
+                    httpUtil = new HttpUtil();
                 }
             }
         }
         return httpUtil;
     }
-    public static PaHttpUtil getInstance(String proxyHostName) {
+    public static HttpUtil getInstance(String proxyHostName) {
         if(httpUtil == null){
-            synchronized (PaHttpUtil.class){
+            synchronized (HttpUtil.class){
                 if(httpUtil == null){
-                    httpUtil = new PaHttpUtil(proxyHostName);
+                    httpUtil = new HttpUtil(proxyHostName);
                 }
             }
         }
