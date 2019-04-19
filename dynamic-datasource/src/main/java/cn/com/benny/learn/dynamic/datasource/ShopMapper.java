@@ -21,15 +21,15 @@ import org.apache.ibatis.annotations.*;
 @Mapper
 public interface ShopMapper {
 
-    @Select("SELECT * FROM t_shop WHERE id = #{id}")
+    @Select("SELECT * FROM shop WHERE id = #{id}")
     @Results(value = {@Result(id = true, column = "id", property = "id"),
             @Result(column = "shop_name", property = "shopName")})
-    public Shop getShop(@Param("id") int id);
+    Shop getShop(@Param("id") int id);
 
-    @Select("SELECT * FROM t_shop WHERE shop_name = #{shopName}")
+    @Select("SELECT * FROM shop WHERE shop_name = #{shopName}")
     @Results(value = {@Result(id = true, column = "id", property = "id"),
             @Result(column = "shop_name", property = "shopName")})
-    public Shop getShopByName(@Param("shopName") String shopName);
+    Shop getShopByName(@Param("shopName") String shopName);
 
 
 }

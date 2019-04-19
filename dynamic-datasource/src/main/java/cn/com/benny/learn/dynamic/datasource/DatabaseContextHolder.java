@@ -29,7 +29,7 @@ public class DatabaseContextHolder {
      *
      * @param type
      */
-    public static void setDatabaseType(String type) {
+    public static void push(String type) {
         contextHolder.get().push(type);
     }
 
@@ -41,7 +41,7 @@ public class DatabaseContextHolder {
      * 移除当前
      * @return
      */
-    public static String remove(){
+    public static String pop(){
         return contextHolder.get().pop();
     }
 }

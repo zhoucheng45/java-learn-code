@@ -27,15 +27,16 @@ public class ShopController {
 
     @Autowired
     ShopDao shopDao;
+
     @RequestMapping("/get")
-    public Shop get(@RequestParam("id") Integer id){
+    public Shop get(@RequestParam("id") Integer id) {
         Shop shop = shopDao.getShop(id);
         return shop;
     }
 
 
     @RequestMapping("/getByName")
-    public Shop getByName(@RequestParam("name") String name){
+    public Shop getByName(@RequestParam("name") String name) {
         Shop shop = shopDao.getShop(name);
         return shop;
     }

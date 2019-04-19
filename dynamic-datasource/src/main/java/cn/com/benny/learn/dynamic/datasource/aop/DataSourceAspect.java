@@ -9,10 +9,10 @@
 package cn.com.benny.learn.dynamic.datasource.aop;
 
 import cn.com.benny.learn.dynamic.datasource.DatabaseContextHolder;
-import cn.com.benny.learn.dynamic.datasource.DatabaseType;
 import cn.com.benny.learn.dynamic.datasource.annotation.DataSource;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.Signature;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -59,6 +59,15 @@ public class DataSourceAspect {
         setDataSource(point);
     }
 
+    @After("declareJointPointBeanExpression()")
+    public void recoverBeanDataSource(JoinPoint point){
+        DatabaseContextHolder.pop();
+    }
+    @After("declareJointPointFunExpression()")
+    public void recoverFunDataSource(JoinPoint point){
+        DatabaseContextHolder.pop();
+    }
+
     private void setDataSource(JoinPoint point) {
         Object target = point.getTarget();
         DataSource dataSource = target.getClass().getAnnotation(DataSource.class);
@@ -70,7 +79,7 @@ public class DataSourceAspect {
         }
         if (dataSource != null) {
             String value = dataSource.value();
-            DatabaseContextHolder.setDatabaseType(DatabaseType.fromName(value));
+            DatabaseContextHolder.push(value);
         }
     }
 }

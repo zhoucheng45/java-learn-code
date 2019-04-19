@@ -10,8 +10,6 @@ package cn.com.benny.learn.dynamic.datasource;
 
 import lombok.ToString;
 
-import java.util.Arrays;
-
 /**
  * <p>Description:<p>
  * QQ: 178542285
@@ -21,25 +19,7 @@ import java.util.Arrays;
  * @Time: 19:41
  */
 @ToString
-public enum DatabaseType {
-    mytestdb("mytestdb"),
-    mytestdb2("mytestdb2"),
-    ;
-    String name;
-    DatabaseType(String name){
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-    public static DatabaseType fromName(String name){
-        DatabaseType[] values = values();
-        for (DatabaseType value : values) {
-            if(value.getName().equals(name)){
-                return value;
-            }
-        }
-        return null;
-    }
+public class DatabaseType {
+    public static final String mytestdb = "mytestdb";
+    public static final String mytestdb2 = "mytestdb2";
 }
