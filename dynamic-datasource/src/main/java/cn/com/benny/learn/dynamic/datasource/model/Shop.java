@@ -2,11 +2,11 @@
  * CopyRight benny
  * ProjectName: java-learn-code
  * Author: benny
- * Date: 19-4-17 下午8:23
- * LastModified: 19-4-17 下午8:23
+ * Date: 19-4-20 下午5:06
+ * LastModified: 19-4-17 下午9:54
  */
 
-package cn.com.benny.learn.dynamic.datasource;
+package cn.com.benny.learn.dynamic.datasource.model;
 
 import lombok.Data;
 

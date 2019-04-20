@@ -3,18 +3,18 @@ spring:
     dynamic:
       datasource:
         master:
-          url: jdbc:mysql://192.168.1.103:3306/test?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
-          driverClassName: com.mysql.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/test?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+          driverClassName: com.mysql.cj.jdbc.Driver
           username: root
-          password: root123
+          password: benny123
         slave:
-          url: jdbc:mysql://192.168.1.103:3306/test2?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
-          driverClassName: com.mysql.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/test2?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+          driverClassName: com.mysql.cj.jdbc.Driver
           username: root
-          password: root123
+          password: benny123
 server:
   port: 8081
 
-#mybatis:
-#  mapper-locations: classpath:mapper/*.xml
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
 #  typeAliasesPackage: cn.com.benny.learn.dynamic.datasource

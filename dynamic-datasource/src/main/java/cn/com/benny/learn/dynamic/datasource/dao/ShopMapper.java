@@ -2,12 +2,13 @@
  * CopyRight benny
  * ProjectName: java-learn-code
  * Author: benny
- * Date: 19-4-17 下午8:22
- * LastModified: 19-4-17 下午8:22
+ * Date: 19-4-20 下午5:09
+ * LastModified: 19-4-20 下午5:06
  */
 
-package cn.com.benny.learn.dynamic.datasource;
+package cn.com.benny.learn.dynamic.datasource.dao;
 
+import cn.com.benny.learn.dynamic.datasource.model.Shop;
 import org.apache.ibatis.annotations.*;
 
 /**
@@ -32,4 +33,5 @@ public interface ShopMapper {
     Shop getShopByName(@Param("shopName") String shopName);
 
 
+    Shop selectById(@Param("id") int id);
 }

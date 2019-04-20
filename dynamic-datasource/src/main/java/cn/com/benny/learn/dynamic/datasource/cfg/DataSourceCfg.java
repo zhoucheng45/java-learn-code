@@ -14,6 +14,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -39,7 +40,7 @@ import java.util.Properties;
 public class DataSourceCfg {
 
     @Autowired
-    private Environment env;
+    MyBatisProperty myBatisProperty;
 
     /**
      * @return
@@ -78,12 +79,10 @@ public class DataSourceCfg {
         fb.setDataSource(dynamicDataSource);// 指定数据源(这个必须有，否则报错)
         // 下边两句仅仅用于*.xml文件，如果整个持久层操作不需要使用到xml文件的话（只用注解就可以搞定），则不加
 
-//        String property = env.getProperty("mybatis.mapperLocations");
-//        if (!StringUtils.isEmpty(property)) {
-//            fb.setTypeAliasesPackage(env.getProperty("mybatis.typeAliasesPackage"));// 指定基包
-//            fb.setMapperLocations(
-//                    new PathMatchingResourcePatternResolver().getResources(property));//
-//        }
+        fb.setTypeAliasesPackage(myBatisProperty.typeAliasesPackage);// 指定基包
+        fb.setMapperLocations(
+                new PathMatchingResourcePatternResolver().getResources(myBatisProperty.mapperLocations));//
+
         return fb.getObject();
     }
 
